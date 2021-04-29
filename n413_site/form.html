@@ -1,0 +1,96 @@
+
+
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>The Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                       background-color: black;
+                       color: white; 
+                    }
+                    .titleDiv {
+                        width: 200px;
+                        height: 50px;
+                        margin: 0 auto;
+                    }
+                    
+                    #form-container {
+                        border-radius: 20px;
+                        margin: 0 auto;
+                        padding: 20px;
+                        padding-left: 50px;
+                        background-color: lightsteelblue;
+                        width: 200px;
+                        height: 400px;
+                        color: black;
+                    }
+                    input {
+                        border-radius: 20px;
+                        border: none;
+                        height: 25px;
+                    }
+                    input::placeholder {
+                        padding-left: 10px;
+                    }
+                    textarea {
+                        border-radius: 20px;
+                        border: none;
+                        height: 60px;
+                    }
+                    textarea::placeholder {
+                        padding-left: 5px;
+                        padding-top: 10px;
+                    }
+                    
+                    #submit {
+                        margin-top: 15px;
+                        background-color: cornflowerblue;
+                        cursor: pointer;
+                    }
+        </style>
+    </head>
+    <body>
+        <div class="titleDiv">
+            <h2>The Form</h2>
+        </div>
+        
+        <form method="POST" action="n413post.php">
+            <div id="form-container">
+                Name: <input type="text" id="name" name="name" value="" placeholder="Enter Name" required/><br/>
+		E-mail: <input type="email" id="email" name="email" value="" placeholder="Enter E-mail" required/><br/>
+                Favorite Color: <input type="text" id="fColor" name="fColor" value="" placeholder="Enter Color" required/><br/>
+                Occupation: <input type="text" id="job" name="job" value="" placeholder="Enter Job Title" required/><br/>
+                Favorite Food <input type="text" id="food" name="food" value="" placeholder="Enter Food" required/><br/>
+                Location: <input type="text" id="location" name="location" value="" placeholder="Enter Location" required/><br/>
+		Catchphrase: <textarea id="comment" name="comment" placeholder="Add your catchphrase here"></textarea><br/>
+		<input type="submit" id="submit" value="Submit" />
+            </div>
+	</form>
+        <div class="container-fluid">
+                <div id="headline" class="row mt-5">
+                    <div class="col-12 text-center">
+                        <h2>Full Stack Amp Jam ____ Project</h2>
+                    </div>
+                </div>
+            </div> 
+    </body>
+    <script>
+            var this_page = "contact";
+            var page_title = "The Site | The Form";
+            $(document).ready(function(){
+            
+                document.title = page_title;
+                navbar_update(this_page);
+                
+        });
+    </script>
+</html>
